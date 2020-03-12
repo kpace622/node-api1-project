@@ -31,7 +31,7 @@ server.get('/users', (req, res) => {
 server.post('/users', (req, res) => {
     const users = req.body;
 
-    users(users)
+    users.push(users)
         .then(user => {
             res.status(201).json({success:true, user})
         })
